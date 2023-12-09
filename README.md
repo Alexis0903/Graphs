@@ -13,4 +13,3 @@ The above and more general problem is to find the optimal walk on already existi
 This will lead to the analysis of existing algorithms and upgrading of some of them hopefully. We can also explore the existing methods in packages like NetworkX or external software like concorde to see if some of them could be upgraded. 
 
 Here's how the programm works : 
-
