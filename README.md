@@ -23,7 +23,7 @@ The idea is to get a scale map of our subject (a parc, a road map, ...) and add 
 
 When you run, a window with the map appear. On this image, you can do several actions using the key board but those keys may depend on your keyboard architecture. 
 
-![Alt text] map.JPG
+![Initial map] (map.JPG)
 
         - You can zoom and dezoom : It's '+' and '-' keys on my keyboard. 
         - You can move on the image : up = 'z', down = 'w', left = 'q', right = 's' 
