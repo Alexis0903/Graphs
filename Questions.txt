@@ -1,0 +1,2 @@
+Can we find a cycle in any graph (assuming that there is at least one) in polynomial time ?
+If a cycle containing all points is optimal from one starting vertice, is it optimal for all vertices ?
