@@ -1,0 +1,4 @@
+Can we find a cycle in any graph (assuming that there is at least one) in polynomial time ?
+If a cycle containing all points is optimal from one starting vertice, is it optimal for all vertices ?
+Is partinioning the graph is clusters (maybe with Louvain method), finding the shortest path within and then linking the clusters a good strategy ?
+Would starting from a cycle and then adding vertices one by one be a good strategy ?
