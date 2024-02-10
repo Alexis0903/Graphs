@@ -21,31 +21,31 @@ Here's how the programm works :
 There's a first section dedicated to creating by ourselves our graph based on scale map. 
 The idea is to get a scale map of our subject (a parc, a road map, ...) and add manually the points of interest and the paths linking them. 
 
-![Initial map](Illustrations/image.png)
+![Initial map](Illustrations_git/image.png)
 
 When you run, a window with the map appear. On this image, you can do several actions using the key board but those keys may depend on your keyboard architecture. 
 
         - You can zoom and dezoom : It's '+' and '-' keys on my keyboard. 
         - You can move on the image : up = 'z', down = 'w', left = 'q', right = 's' 
 
-![Zoomed image](Illustrations/image-1.png)
+![Zoomed image](Illustrations_git/image-1.png)
 
 The main action is to add points : you can do it by hitting the right-click on your pad or your mouse. When you do it, this happens : 
 
         - A window opens and asks the user to select a name for the node. In my application, those are animals. 
         - And when you validate, a red dot appears on the map. This point is however not saved yet. 
 
-![Naming points](Illustrations/image-2.png)
-![Red point example](Illustrations/image-3.png)
+![Naming points](Illustrations_git/image-2.png)
+![Red point example](Illustrations_git/image-3.png)
 
 As it may not be suitable to add all points at once, you can do it in multiple steps : 
 
         - When you want to save the red points you added, press 'p'. 
         - A new window opens and the red points became blue, meaning that they've been saved. 
 
-![Multiple red dots](Illustrations/image-4.png)
-![Saved blue dots](Illustrations/image-5.png)
-![Blue and red dots](Illustrations/image-6.png)
+![Multiple red dots](Illustrations_git/image-4.png)
+![Saved blue dots](Illustrations_git/image-5.png)
+![Blue and red dots](Illustrations_git/image-6.png)
 
 You can do it as many times as you want. 
 
@@ -53,27 +53,27 @@ You can do it as many times as you want.
 
 It's now time to add the paths between the points we added. 
 
-![Map with points](Illustrations/image-7.png)
+![Map with points](Illustrations_git/image-7.png)
 
         - You have to maintain the left-click pushed while drawing the path between the 2 nodes you want to link. 
 
-![Drawing a path](Illustrations/image-8.png)
+![Drawing a path](Illustrations_git/image-8.png)
 
 When it's done, a new window open and you must choose the 2 ends of the path among the points you added previously and validate your answer.
 The order in which you link the points doesn't matter.  
 If you misclick, just press cancel and the curve won't be kept. 
 
-![Ends](Illustrations/image-9.png)
+![Ends](Illustrations_git/image-9.png)
 
 You can add multiple paths between the same 2 nodes. Only the shortest one will be kept for computations. 
 
-![multiple edges between nodes](Illustrations/image-10.png)
+![multiple edges between nodes](Illustrations_git/image-10.png)
 
 Drawing a path linking the node to hitself is kinda weird in this application because this will never be used in the optimal path. 
 
 Once again, press 'p' to save the current curves in red (and they become blue) and 'y' when you finished addind paths. 
 
-![All paths](Illustrations/image-11.png)
+![All paths](Illustrations_git/image-11.png)
 
 We have some created files : 
 
@@ -83,7 +83,7 @@ We have some created files :
         - Map_with_points.JPG : the map with the added points
         - Map_with_curves.JPG : the map with the added curves
 
-![Txt files](Illustrations/image-12.png)
+![Txt files](Illustrations_git/image-12.png)
 
 And it also prints the points and curves in the notebook. 
 
@@ -96,7 +96,7 @@ The second section is about trying to find the shortest paths using known algori
 First, you see a distance matrix between the nodes. 
 The i,j entry of this matrix is the shortest distance between nodes i and j. If there's no edge between the nodes, the entry is infinity. 
 
-![Matrix direct paths](Illustrations/image-13.png)
+![Matrix direct paths](Illustrations_git/image-13.png)
 
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -105,7 +105,7 @@ You then see 2 graphs :
         - Left graph : the graph corresponding to the nodes and edges we added previously. The positions of the nodes respect their positions on the map. 
         - Right graph : The same graph with an automatic display so we can see clearly all the names and weights. 
 
-![Graphs](Illustrations/image-14.png)
+![Graphs](Illustrations_git/image-14.png)
 
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -119,7 +119,7 @@ Then, we use algorithms defined in the package networkx :
         
         Indeed, I can't obtain a worst cost than the total weight of this subgraph 2 times. It means that our walk is just getting to every node using an edge in this subgraph and then take it in the opposite direction. 
 
-![Kruskal](Illustrations/image-15.png)
+![Kruskal](Illustrations_git/image-15.png)
 
         - 3. a test for the Dijkstra algorithm to find the shortest path between 2 points in the graph. Of course, if we try start == end, then the result is 0. It doesn't take in account that we have to visit all nodes. 
 
