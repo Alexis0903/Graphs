@@ -98,14 +98,14 @@ The second section is about trying to find the shortest paths using known algori
 First, you see a distance matrix between the nodes. 
 The i,j entry of this matrix is the shortest distance between nodes i and j. If there's no edge between the nodes, the entry should be infinity. In practise, the algorithm needs integer values and so it's 10**15.
 
-![Matrix direct paths](Illustrations_git/image-13.png)
+![Matrix direct paths](Illustrations_git/image-13.PNG)
 
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 You then see the result of the kruskal algorithm.It's computed using the defined functions in NetworkX.
 The result is the cheapest spanning tree linking all nodes of the graph. It's saved in kruskal.pdf
 
-![Kruskal](Illustrations_git/image-14.png)
+![Kruskal](Illustrations_git/image-14.PNG)
 
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -114,4 +114,4 @@ You then have the algorithm from Google that computes the optimal path
 It then displays the optimal path : on the left with respect to the position of the points on the map and on the right with automatically adjusted positions
 What you can observe is that sometimes, the algorithm selects 10**15 edges (that don't really exist) and so, the result is not really a cycle. 
 
-![Optimal path](Illustrations_git/image-15.png)
+![Optimal path](Illustrations_git/image-15.PNG)
