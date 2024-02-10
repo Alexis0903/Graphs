@@ -91,48 +91,27 @@ And it also prints the points and curves in the notebook.
 
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-The second section is about trying to find the shortest paths using known algorithms. 
+The second section is about trying to find the shortest paths using known algorithms. it's called sol_google.ipynb
 
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 First, you see a distance matrix between the nodes. 
-The i,j entry of this matrix is the shortest distance between nodes i and j. If there's no edge between the nodes, the entry is infinity. 
+The i,j entry of this matrix is the shortest distance between nodes i and j. If there's no edge between the nodes, the entry should be infinity. In practise, the algorithm needs integer values and so it's 10**15.
 
 ![Matrix direct paths](Illustrations_git/image-13.png)
 
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-You then see 2 graphs : 
+You then see the result of the kruskal algorithm.It's computed using the defined functions in NetworkX.
+The result is the cheapest spanning tree linking all nodes of the graph. It's saved in kruskal.pdf
 
-        - Left graph : the graph corresponding to the nodes and edges we added previously. The positions of the nodes respect their positions on the map. 
-        - Right graph : The same graph with an automatic display so we can see clearly all the names and weights. 
-
-![Graphs](Illustrations_git/image-14.png)
+![Kruskal](Illustrations_git/image-14.png)
 
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Then, we use algorithms defined in the package networkx : 
+You then have the algorithm from Google that computes the optimal path 
 
-#--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+It then displays the optimal path : on the left with respect to the position of the points on the map and on the right with automatically adjusted positions
+What you can observe is that sometimes, the algorithm selects 10**15 edges (that don't really exist) and so, the result is not really a cycle. 
 
-        - 1. a test of the Christofides algorithm. By the time I'm writing this, it passes through infinity edges so it doesn't work well. But I didn't deeply read the description. 
-
-        - 2. the kruskal algorithm to retrieve the minimum cost spanning (linking all points) subgraph. It's displayed in red. This subgraph leads to a bound. 
-        
-        Indeed, I can't obtain a worst cost than the total weight of this subgraph 2 times. It means that our walk is just getting to every node using an edge in this subgraph and then take it in the opposite direction. 
-
-![Kruskal](Illustrations_git/image-15.png)
-
-        - 3. a test for the Dijkstra algorithm to find the shortest path between 2 points in the graph. Of course, if we try start == end, then the result is 0. It doesn't take in account that we have to visit all nodes. 
-
-        Notice that the result of Dijkstra doesn't necessary follow edges in the subgraph found with kruskal ! 
-
-        - 4. a try for an augmented version of Dijkstra that passes through all points. IT DOESN'T WORK. 
-        - 5. a try for an held_karp algorithm but IT DOESN'T WORK and I'm not sure it's suited for this kind of problem.    
-
-#--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-The next steps are to : 
-
-        - Seek for the algorithms and methods in litterature that could be useful (and networkx documentation)
-        - Try to understand the functionning of apps such as Waze, maps, etc...
+![Optimal path](Illustrations_git/image-15.png)
