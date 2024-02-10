@@ -6,7 +6,7 @@ It's clearly a trading salesman problem but we would allow to get back to nodes 
 
 The ultimate goal is to say : To see all the animals from the entry of the parc, you must see them in this order and you'll have to walk this much. 
 
-The immediate upgrade of the problem could be adding some time constraints like queues in amusement parc like Disneyland,... or some PMR constraints for people that can't use stairs. 
+The immediate upgrade of the problem could be adding some time constraints like queues in amusement parc like Disneyland,... or some PMR constraints for people that can't use stairs. We could even add some constraints telling that we must be at some points at some precise hour.  
 
 The above and more general problem is to find the optimal walk on already existing edges to visit all the nodes at least once and come back to where we started. It has applications for buses, cars (Waze, maps), for planes (if we admit that the aerial traffic is already fixed) and more generally in all problems in which we wish to see all the nodes of a graph for a minimum total weight.
 
