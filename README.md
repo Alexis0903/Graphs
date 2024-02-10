@@ -18,7 +18,7 @@ Here's how the programm works :
 
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-There's a first section dedicated to creating by ourselves our graph based on scale map. 
+There's a first section dedicated to creating by ourselves our graph based on scale map. It's called creating_the_data.ipynb
 The idea is to get a scale map of our subject (a parc, a road map, ...) and add manually the points of interest and the paths linking them. 
 
 ![Initial map](Illustrations_git/image.png)
@@ -28,7 +28,7 @@ When you run, a window with the map appear. On this image, you can do several ac
         - You can zoom and dezoom : It's '+' and '-' keys on my keyboard. 
         - You can move on the image : up = 'z', down = 'w', left = 'q', right = 's' 
 
-![Zoomed image](Illustrations_git/image-1.png)
+![Zoomed image](Illustrations_git/image-1.JPG)
 
 The main action is to add points : you can do it by hitting the right-click on your pad or your mouse. When you do it, this happens : 
 
@@ -57,13 +57,15 @@ It's now time to add the paths between the points we added.
 
         - You have to maintain the left-click pushed while drawing the path between the 2 nodes you want to link. 
 
-![Drawing a path](Illustrations_git/image-8.png)
-
-When it's done, a new window open and you must choose the 2 ends of the path among the points you added previously and validate your answer.
+When it's done, a new window opens and you must choose the 2 ends of the path among the points you added previously and validate your answer.
 The order in which you link the points doesn't matter.  
 If you misclick, just press cancel and the curve won't be kept. 
 
-![Ends](Illustrations_git/image-9.png)
+![Ends](Illustrations_git/image-8.png)
+
+Then just move or zoom on the image to see the curve drawn in red. 
+
+![Red curve](Illustrations_git/image-9.png)
 
 You can add multiple paths between the same 2 nodes. Only the shortest one will be kept for computations. 
 
