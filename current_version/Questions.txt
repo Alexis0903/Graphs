@@ -3,3 +3,4 @@ If a cycle containing all points is optimal from one starting vertice, is it opt
 Is partinioning the graph is clusters (maybe with Louvain method), finding the shortest path within and then linking the clusters a good strategy ?
 Would starting from a cycle and then adding vertices one by one be a good strategy ?
 Is it possible to find all the 3,4,... n-1 cycles in a graph in polynomial time ? The idea wwould be to cut the edges that show a longer path. 
+As a cycle can be shorten every time it crosses itself, is it true for every planar representation of this graph ?
